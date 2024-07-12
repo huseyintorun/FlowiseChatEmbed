@@ -30,6 +30,14 @@ export const Badge = (props: Props) => {
       subtree: false,
       childList: true,
     });
+
+    // Pop-up bildirimini göster
+    setTimeout(() => {
+      const notification = document.getElementById('notification');
+      if (notification) {
+        notification.style.display = 'flex';
+      }
+    }, 3000);
   });
 
   onCleanup(() => {
@@ -58,5 +66,4 @@ export const Badge = (props: Props) => {
       </a>
     </span>
   );
-  git;
 };
